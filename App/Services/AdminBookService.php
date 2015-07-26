@@ -21,4 +21,9 @@ class AdminBookService
 
         return 'Permission denied.';
     }
+
+    public function provide($book_id)
+    {
+        return $this->repo_book->stock($book_id);
+    }
 }

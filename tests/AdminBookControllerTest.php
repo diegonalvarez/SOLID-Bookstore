@@ -2,6 +2,8 @@
 
 require 'vendor/autoload.php';
 use App\Controllers\AdminBookController;
+use App\Repositories\AdminRepository;
+use App\Repositories\BookRepository;
 
 class AdminBookControllerTest extends \PHPUnit_Framework_TestCase
 {
@@ -10,7 +12,7 @@ class AdminBookControllerTest extends \PHPUnit_Framework_TestCase
 
     public function __construct()
     {
-        $this->test = new AdminBookController();
+        $this->test = new AdminBookController(new BookRepository, new AdminRepository);
     }
 
     public function testAddBookBookIsNumberAdminNot()
@@ -38,6 +40,13 @@ class AdminBookControllerTest extends \PHPUnit_Framework_TestCase
     {
         $this->name_book = 'Pepe';
         $this->user_admin = 'Pepe';
+        var_dump($this->test->addBook($this->name_book, $this->user_admin));
+    }
+
+    public function testAddBookBookIsNullAdminNull()
+    {
+        $this->name_book = null;
+        $this->user_admin = null;
         var_dump($this->test->addBook($this->name_book, $this->user_admin));
     }
 }

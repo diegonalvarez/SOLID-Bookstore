@@ -9,4 +9,9 @@ class BookEntity
     {
         return $book_name;
     }
+
+    public function getId($book_id)
+    {
+        return ($book_id === 1);
+    }
 }

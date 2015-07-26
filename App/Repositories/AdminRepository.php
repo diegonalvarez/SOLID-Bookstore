@@ -12,6 +12,6 @@ class AdminRepository implements AdminInterface
             return true;
         }
 
-        return false;
+        return null;
     }
 }

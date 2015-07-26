@@ -1,6 +1,8 @@
 <?php namespace App\Entities;
 
-class AdminEntity
+use App\Entities\Entity;
+
+class AdminEntity extends Entity
 {
     private $id;
     protected $admin_key;
