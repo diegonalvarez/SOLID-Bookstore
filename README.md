@@ -8,7 +8,7 @@ SOLID-Bookstore is an example of implementation in php that includes the followi
 - [PSR4](http://www.php-fig.org/psr/psr-4/)
 - [Tests (PHPUnit)](https://phpunit.de/)
 
-Intended as an approach to multitier architecture. (Presentation - Domain - Application)
+Intended as an approach to [multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 
 ## Third-party
 - [Container](http://container.thephpleague.com/)(DI)
